@@ -11,4 +11,4 @@ console.log(addOrConcat(10, 20));
 console.log(addOrConcat('10', '20'));
 console.log(addOrConcat(10, '20'));
 console.log(addOrConcat('10', 20));
-console.log(addOrConcat(false, true));
+console.log(addOrConcat(true, true));
