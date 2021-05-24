@@ -1,16 +1,17 @@
-type VerifyUserFn = (user: User, sentValue: User) => boolean;
-type User = {
-  username: string,
-  password: string,
-};
+type MapStringCallback = (item: string) => string;
 
-const verifyUser: VerifyUserFn = (user, sentValue) => {
-  return (
-    user.username === sentValue.username && user.password === sentValue.password
-  );
-};
+export function mapStrings(array: string[], callbackfn: MapStringCallback) {
+  const newArray: string[] = [];
 
-const bdUser = { username: 'joao', password: '123456' };
-const sentUser = { username: 'joao', password: '123456' };
-const loggedIn = verifyUser(bdUser, sentUser);
-console.log(loggedIn);
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callbackfn(array[i]));
+  }
+
+  return newArray;
+}
+
+const abc = ['a', 'b', 'c'];
+const abcMapped = mapStrings(abc, (item) => item.toUpperCase());
+
+console.log(abc);
+console.log(abcMapped);
