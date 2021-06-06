@@ -7,4 +7,5 @@
         "cmyk",
         "cor"
     ],
+    "god.tsconfig": "./tsconfig.json",
 }
