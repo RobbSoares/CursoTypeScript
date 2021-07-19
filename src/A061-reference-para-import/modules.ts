@@ -14,6 +14,4 @@ namespace MyNamespace {
   }
 }
 
-const pessoaDoNamespace = new MyNamespace.NamespacePerson('Rob');
-
-export default 1 // apagar depois
+const constDoNamespace = 'valor da const do namespace';
