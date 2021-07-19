@@ -4,7 +4,7 @@ function decorator(classPrototype: any, name: string | any): any {
   return {
     get: () => propertyValue,
     set: (value: any) => {
-      if (typeof value === 'string'){
+      if (typeof value === 'string') {
         propertyValue = value.split('').reverse().join('');
         return;
       }
